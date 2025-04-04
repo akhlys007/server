@@ -12,7 +12,7 @@ const morgan_1 = __importDefault(require("morgan"));
 /* ROUTE IMPORTS */
 const dashboardRoutes_1 = __importDefault(require("./routes/dashboardRoutes"));
 // import expenseRoutes from "./routes/expenseRoutes";
-// import productRoutes from "./routes/productRoutes";
+const productRoutes_1 = __importDefault(require("./routes/productRoutes"));
 // import userRoutes from "./routes/userRoutes";
 /* CONFIGURATIONS */
 dotenv_1.default.config();
@@ -26,7 +26,7 @@ app.use(body_parser_1.default.urlencoded({ extended: false }));
 app.use((0, cors_1.default)());
 /* ROUTES */
 app.use("/dashboard", dashboardRoutes_1.default); // http://localhost:8000/dashboard
-// app.use("/products", productRoutes); // http://localhost:8000/products
+app.use("/products", productRoutes_1.default); // http://localhost:8000/products
 // app.use("/users", userRoutes); // http://localhost:8000/users
 // app.use("/expenses", expenseRoutes); // http://localhost:8000/expenses
 /* SERVER */
